@@ -10,12 +10,11 @@ from rest import getChemblData as get
 
 
 def testgetChemblData2Impl():
-    moleculeUrl = 'https://www.ebi.ac.uk/chembl/api/data/molecule?format=json' 
-    moleculesJson = get.chemblGetData(moleculeUrl)
-    print(moleculesJson)
-    data = json.loads(moleculesJson)
-
-    
+    baseUrl = 'https://www.ebi.ac.uk' 
+    serviceUrl = 'chembl/api/data/molecule'
+    moleculesList = get.getData2(baseUrl,serviceUrl)
+    print(moleculesList)
+        
     return "good"
 
 class getChemblDataIT(unittest.TestCase):
