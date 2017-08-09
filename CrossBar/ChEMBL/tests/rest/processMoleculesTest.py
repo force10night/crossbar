@@ -9,10 +9,11 @@ from rest import processMolecules as process
 
 
 def testprocessMoleculesJson():
-    jsonFile = 'resources/molecules.json'
+    jsonFile = '/Users/anight/crossbar/CrossBar/ChEMBL/resources/molecules.json'
+    
     with open(jsonFile, 'r') as f:
-        process.processMolecules(f)
-    return "good"
+        process.__process_Molecules__(f)
+        return "good"
     
 
 class processMoleculesTest(unittest.TestCase):
